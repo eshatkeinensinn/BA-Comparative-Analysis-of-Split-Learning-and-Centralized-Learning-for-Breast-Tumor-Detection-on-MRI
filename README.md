@@ -1,0 +1,2 @@
+# BA-Comparative-Analysis-of-Split-Learning-and-Centralized-Learning-for-Breast-Tumor-Detection-on-MRI
+This repository contains the code and data for a comparative study of Split Learning and Centralized Learning methodologies applied to breast tumor detection using MRI scans. The aim of this project is to evaluate the effectiveness, efficiency, and practicality of these two approaches in the context of medical imaging and tumor detection.
