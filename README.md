@@ -19,11 +19,13 @@ I suggest to run the [NVFlare Split Learning Tutorial](https://github.com/NVIDIA
 ### The Centralized Learning 
 
 Centralized Learning is implemented by the Python script "centralized_learning.py" and could be run in the consol. By changing various parameters in the script, the experiments can be modified.
-| Line | Name     | Typ     |
-| ------------- | ------------- | ------------- |
-| 24     | model     | ResNet34,ResNet50 or DenseNet121     |
-| 65      | batch_size      | Int      |
-| 66      | ep0che      | Int      |
+| Name         | Line | Typ                          |
+| ------------ | ---- | ---------------------------- |
+| Model        | 24   | ResNet34, ResNet50, DenseNet121 |
+| Learning Rate | 58   | Int                          |
+| Batch Size   | 65   | Int                          |
+| Epoch       | 66   | Int                          |
+
 
 ### Split Learning
 
@@ -34,6 +36,19 @@ jupyter lab .
 2. Open and run the "mri_split_learning.ipynb"
 
 The results can be accessed via the tensorboard.
+
+By changing various parameters in the code, the experiments can be modified.
+
+
+
+
+| Parameter | Code     | Typ     |
+| ------------- | ------------- | ------------- |
+| Model     | in src/splitnn/split_nn.py the parentclass of SplitNN     | ResNet34,ResNet50 or DenseNet121     |
+| Batch Size      | jobs/splitnn/server/config/config_fed_server.json "batch_size"      | Int      |
+| Number of Rounds     | jobs/splitnn/server/config/config_fed_server.json "num_rounds"      | Int (should be multiple of trainingsize/batch size)      |
+| Learning Rate     | jobs/splitnn/{site_1 and site/2}/config/config_fed_client.json "lr"      | Int      |
+
 
 ## Relocate the Cutlayer
 
